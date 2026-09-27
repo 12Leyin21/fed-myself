@@ -78,11 +78,10 @@ PWA 跟服务器不在同一个域名的话，部署时加 `FOOD_LOG_CORS=https:
 
 ## 许可
 
-代码是 MIT：随便用、改、拿去做自己的东西，保留版权声明就行。
+代码是 MIT：可以随便用、改、拿去做自己的东西💕保留版权声明就好。
 
-- **「fed-myself」这个名字和 `docs/screenshots/` 里的截图不在 MIT 范围内**，版权归 Tilia & Quercus 所有。
-  代码随你用，但请别拿这个名字或这些截图当你自己产品的门面。
-- 如果你把它用进了商业产品，欢迎告诉我们一声（开个 issue 就行），我们会很开心 🌱
+* 「fed-myself」这个名字和 `docs/screenshots/` 里的截图不在 MIT 范围内，版权归 Tilia & Quercus 所有。
+* 拿去商用的话，欢迎开个 issue 告诉我们一声，我们会很开心！
 
 MIT License · made by Tilia & Quercus
 
