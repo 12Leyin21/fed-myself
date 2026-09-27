@@ -410,6 +410,7 @@ async def lookup(request: Request, q: str = "", country: str = "world", limit: i
     params = {"search_terms": q, "search_simple": 1, "json": 1, "page_size": max(12, limit * 2),
               "fields": "product_name,brands,nutriments,serving_size"}
     hosts = [f"{country}.openfoodfacts.org"] + (["world.openfoodfacts.org"] if country != "world" else [])
+    answered = False
     for host in hosts:
         found = []
         for attempt in range(2):   # Open Food Facts sometimes answers 503 under load; one retry is enough
@@ -420,10 +421,14 @@ async def lookup(request: Request, q: str = "", country: str = "world", limit: i
                     await asyncio.sleep(1)
                     continue
                 found = food_log.off_products(r.json(), limit=limit)
+                answered = True
                 break
             except Exception:
                 await asyncio.sleep(1)
         if found:
             return {"source": f"Open Food Facts ({host.split('.')[0]})", "products": found,
                     "lines": [food_log.off_line(p) for p in found]}
+    if not answered:
+        # every host failed: say so, instead of pretending nothing matched (the app would not retry)
+        raise HTTPException(status_code=502, detail="Open Food Facts is not answering right now, try again in a moment")
     return {"source": "Open Food Facts", "products": [], "lines": []}

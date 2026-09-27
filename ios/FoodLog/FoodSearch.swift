@@ -35,7 +35,7 @@ struct FoodSearchSheet: View {
                             .focused($focused)
                             .submitLabel(.search)
                             .autocorrectionDisabled()
-                            .onSubmit { Task { await run(query) } }
+                            .onSubmit { Task { await run(query, force: true) } }   // 按「搜索」就再查一遍，哪怕刚查过
                         if !query.isEmpty {
                             Button {
                                 query = ""
@@ -132,9 +132,9 @@ struct FoodSearchSheet: View {
         .contentShape(Rectangle())
     }
 
-    private func run(_ raw: String) async {
+    private func run(_ raw: String, force: Bool = false) async {
         let q = raw.trimmingCharacters(in: .whitespaces)
-        guard !q.isEmpty, q != searched || failed else { return }
+        guard !q.isEmpty, force || q != searched || failed else { return }
         seq += 1
         let mine = seq
         searching = true
