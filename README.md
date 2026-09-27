@@ -148,10 +148,9 @@ The UI text is in Chinese; PRs for other languages are welcome.
 
 ## License
 
-The code is MIT: use it, change it, build on it — just keep the copyright notice.
+The code is MIT: use it, change it, build your own thing with it 💕 just keep the copyright notice.
 
-- **The name "fed-myself" and the screenshots in `docs/screenshots/` are not covered by the MIT license**; they remain © Tilia & Quercus.
-  Use the code however you like, but please don't use the name or these screenshots as the face of your own product.
-- If you ship it in a commercial product, we'd love to hear about it (just open an issue) 🌱
+* The name "fed-myself" and the screenshots in `docs/screenshots/` are not covered by the MIT license; they remain © Tilia & Quercus.
+* If you use it in a commercial product, we'd love to hear about it — just open an issue!
 
 MIT License · made by Tilia & Quercus
