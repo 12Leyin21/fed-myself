@@ -76,6 +76,14 @@ PWA 跟服务器不在同一个域名的话，部署时加 `FOOD_LOG_CORS=https:
 - 营养数据来自 [Open Food Facts](https://world.openfoodfacts.org)（开放数据，ODbL 许可）。
 - 本模块诞生在一个借助许多开源项目才能长成的小家里，这是还回去的一小块。
 
+## 许可
+
+代码是 MIT：随便用、改、拿去做自己的东西，保留版权声明就行。
+
+- **「fed-myself」这个名字和 `docs/screenshots/` 里的截图不在 MIT 范围内**，版权归 Tilia & Quercus 所有。
+  代码随你用，但请别拿这个名字或这些截图当你自己产品的门面。
+- 如果你把它用进了商业产品，欢迎告诉我们一声（开个 issue 就行），我们会很开心 🌱
+
 MIT License · made by Tilia & Quercus
 
 ---
@@ -138,5 +146,13 @@ The UI text is in Chinese; PRs for other languages are welcome.
 - Layout inspired by **Boohee (薄荷健康)**.
 - Nutrition data © [Open Food Facts](https://world.openfoodfacts.org) contributors (ODbL).
 - This module was born in a small home that could only grow with the help of many open-source projects. This is a small piece given back.
+
+## License
+
+The code is MIT: use it, change it, build on it — just keep the copyright notice.
+
+- **The name "fed-myself" and the screenshots in `docs/screenshots/` are not covered by the MIT license**; they remain © Tilia & Quercus.
+  Use the code however you like, but please don't use the name or these screenshots as the face of your own product.
+- If you ship it in a commercial product, we'd love to hear about it (just open an issue) 🌱
 
 MIT License · made by Tilia & Quercus
